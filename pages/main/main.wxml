@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<import src="../../template/postList.wxml" />
+<view class='container'>
+  <swiper class='swiper' indicator-dots="{{true}}" autoplay='{{true}}' duration='500' interval='3000'>
+    <block wx:for="{{today.top_stories}}" wx:key="banner">
+      <swiper-item>
+        <navigator url='../post/post?id={{ item.id }}' style='height:100%'>
+          <view class='swiper-item' style='background-image: url({{ item.image }})'></view>
+          <text class='swiper-title'>{{ item.title }}</text>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- scroll-view -->
+  <scroll-view scroll-y="{{true}}" style='height:1200rpx' class='scroll-view' bindscrolltolower="lower">
+    
+    <view class='index-tip'>今日新闻</view>
+    <block wx:for="{{ today.stories }}" wx:key="postList">
+      <template is="postList" data="{{...item}}" />
+    </block>
+
+    <block wx:for="{{history}}" wx:key="history" wx:if="{{history.length}}">
+      <view class='index-tip'>{{ item.formatDate }}</view>
+      <block wx:for="{{ item.stories }}" wx:for-item="post" wx:key="historyItem">
+        <template is="postList" data="{{...post}}" />
+      </block>
+    </block>
+
+    <view class='refesh' wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45" />
+      <text>刷新中...</text>
+    </view>
+    <view class='refesh' wx:else style="display:none">
+      <text></text>
+    </view>
+  </scroll-view>
+
+</view>

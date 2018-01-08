@@ -1,0 +1,20 @@
+<!--pages/themeList/themeList.wxml-->
+<import src="../../template/postList.wxml" />
+<block wx:if="{{ name }}">
+  <view class='top-image' style='background-image:url({{ background }})'>
+    <view class='theme-desc'>{{ description }}</view>
+  </view>
+  <view class='middle-info'>
+    <block wx:if="{{editors.length}}">
+      主编:
+    <block wx:for="{{editors}}" wx:key="editors">
+      <image class='editor-avatar' src='{{ item.avatar }}'></image>
+    </block>
+    </block>
+  </view>
+  <view class='theme-content'>
+    <block wx:for="{{ stories }}" wx:key="stories">
+      <template is="postList" data="{{...item}}" />
+    </block>
+  </view>
+</block>

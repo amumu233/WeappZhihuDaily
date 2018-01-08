@@ -1,0 +1,7 @@
+<!--pages/theme/theme.wxml-->
+<import src="../../template/themeList.wxml" />
+<view class='container'>
+  <block wx:for="{{others}}" wx:if="{{others}}" wx:key="theme">
+    <template is="themeList" data="{{...item}}" />
+  </block>
+</view>

@@ -1,0 +1,8 @@
+<template name="postList">
+  <navigator url='../post/post?id={{ id }}'>
+    <view class='post-li'>
+      <view class='post-title'>{{title}}</view>
+      <view wx:if="{{images[0]}}" class='post-thumb' style='background-image:url({{images[0]}})'></view>
+    </view>  
+  </navigator>
+</template>

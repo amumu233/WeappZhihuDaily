@@ -1,0 +1,11 @@
+<template name="themeList">
+  <navigator class='theme-list-container' url='../themeList/themeList?id={{id}}'>
+    <view class='theme-list'>
+      <view class='theme-text'>
+        <view class='theme-title'>{{ name }}</view>
+        <view class='theme-desc'>{{ description }}</view>
+      </view>
+      <view class='theme-thumb' style='background-image: url({{ thumbnail }})' ></view>
+    </view>
+  </navigator>
+</template>

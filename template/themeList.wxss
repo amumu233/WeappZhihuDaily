@@ -1,0 +1,31 @@
+.theme-list-container {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.theme-list {
+  padding: 20rpx;
+  border-bottom: 4px solid #111111;
+  box-sizing: border-box;
+  display: flex;
+}
+.theme-text {
+  flex: auto;
+}
+.theme-text .theme-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #eeeeee;
+}
+.theme-text .theme-desc {
+  font-size: 24rpx;
+  color: #dddddd;
+}
+.theme-thumb {
+  width: 100rpx;
+  height: 100rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: none;
+}

@@ -1,0 +1,5 @@
+<!--pages/post/post.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<block wx:if="{{article}}" wx:key="article">
+  <template is="wxParse" data="{{wxParseData : article.nodes}}"/>
+</block>

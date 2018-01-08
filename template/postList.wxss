@@ -1,0 +1,23 @@
+.post-li{
+  width: 700rpx;
+  border: 1px solid #292929;
+  border-radius: 3px;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #222222;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.post-title {
+  flex: auto;
+  font-size: 16px;
+  color: #eeeeee;
+}
+.post-thumb {
+  width: 100rpx;
+  height: 100rpx;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: none;
+}
