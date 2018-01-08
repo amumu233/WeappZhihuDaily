@@ -3,13 +3,13 @@
 仅作小程序开发学习,不涉及商用
 
 ### 目标功能
-- [X]主页
+- [X] 主页
     - 轮播图 : \<swiper\>
     - 内容长列表: \<scroll-view>
     - 下拉无限加载 : bindscrolltolower
-- [X]主题列表
-- [X]主题详情
-- [X]文章阅读
+- [X] 主题列表
+- [X] 主题详情
+- [X] 文章阅读
     - wxParse处理HTML片段
 
 ### API WIKI 
